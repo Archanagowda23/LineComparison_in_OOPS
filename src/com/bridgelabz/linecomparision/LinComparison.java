@@ -3,12 +3,13 @@ package com.bridgelabz.linecomparision;
 import java.util.Scanner;
 
 public class LinComparison {
+    
     public static double lengthCalc(double x1, double y1, double x2, double y2) {
         double length = Math.sqrt(((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)));
         return length;
     }
 
-    public static int LengthEquality(double length1, double length2) {
+    public static int lengthEquality(double length1, double length2) {
         if (length1 == length2) {
             System.out.println("Both the line are equal in size");
         } else if (length1 > length2) {
@@ -19,7 +20,7 @@ public class LinComparison {
         return 0;
     }
     @SuppressWarnings("removal")
-    public static int LengthCompare(double length1, double length2) {
+    public static int lengthCompare(double length1, double length2) {
         int flag;
         Double len = new Double(length1);
         Double len1 = new Double(length2);
@@ -45,8 +46,8 @@ public class LinComparison {
         double b2 = scanner.nextDouble();
         double length2 = lengthCalc(a1, b1, a2, b2);
 
-        int length = LengthEquality(length1, length2);
-        int flag = LengthCompare(length1, length2);
+        int length = lengthEquality(length1, length2);
+        int flag = lengthCompare(length1, length2);
 
     }
 }
